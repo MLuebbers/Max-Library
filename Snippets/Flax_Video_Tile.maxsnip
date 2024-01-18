@@ -1,0 +1,218 @@
+{
+	"patcher" : 	{
+		"boxes" : [ 			{
+				"box" : 				{
+					"maxclass" : "newobj",
+					"text" : "jit.gl.pix @title tile",
+					"patching_rect" : [ 10.0, 10.0, 101.0, 22.0 ],
+					"numinlets" : 1,
+					"id" : "obj-26",
+					"numoutlets" : 3,
+					"outlettype" : [ "jit_gl_texture", "jit_gl_texture", "" ],
+					"patcher" : 					{
+						"fileversion" : 1,
+						"appversion" : 						{
+							"major" : 8,
+							"minor" : 5,
+							"revision" : 5,
+							"architecture" : "x64",
+							"modernui" : 1
+						}
+,
+						"classnamespace" : "jit.gen",
+						"rect" : [ 1546.0, -687.0, 2492.0, 1344.0 ],
+						"bglocked" : 0,
+						"openinpresentation" : 0,
+						"default_fontsize" : 12.0,
+						"default_fontface" : 0,
+						"default_fontname" : "Arial",
+						"gridonopen" : 1,
+						"gridsize" : [ 15.0, 15.0 ],
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
+						"statusbarvisible" : 2,
+						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
+						"boxanimatetime" : 200,
+						"enablehscroll" : 1,
+						"enablevscroll" : 1,
+						"devicewidth" : 0.0,
+						"description" : "",
+						"digest" : "",
+						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
+						"assistshowspatchername" : 0,
+						"boxes" : [ 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "param divisions 1 1",
+									"patching_rect" : [ 549.0, 29.0, 112.0, 22.0 ],
+									"numinlets" : 0,
+									"id" : "obj-14",
+									"numoutlets" : 1,
+									"outlettype" : [ "" ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "% 1",
+									"patching_rect" : [ 256.0, 326.0, 29.0, 22.0 ],
+									"numinlets" : 1,
+									"id" : "obj-13",
+									"numoutlets" : 1,
+									"outlettype" : [ "" ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "* divisions",
+									"patching_rect" : [ 205.0, 169.0, 63.0, 22.0 ],
+									"numinlets" : 1,
+									"id" : "obj-12",
+									"numoutlets" : 1,
+									"outlettype" : [ "" ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "nearest",
+									"patching_rect" : [ 50.0, 339.0, 49.0, 22.0 ],
+									"numinlets" : 2,
+									"id" : "obj-11",
+									"numoutlets" : 1,
+									"outlettype" : [ "" ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "out 2",
+									"patching_rect" : [ 368.0, 492.0, 35.0, 22.0 ],
+									"numinlets" : 1,
+									"id" : "obj-10",
+									"numoutlets" : 0
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "norm",
+									"patching_rect" : [ 398.0, 14.0, 36.0, 22.0 ],
+									"numinlets" : 0,
+									"id" : "obj-5",
+									"numoutlets" : 1,
+									"outlettype" : [ "" ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "in 1",
+									"patching_rect" : [ 50.0, 14.0, 28.0, 22.0 ],
+									"numinlets" : 0,
+									"id" : "obj-1",
+									"numoutlets" : 1,
+									"outlettype" : [ "" ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "out 1",
+									"patching_rect" : [ 50.0, 499.0, 35.0, 22.0 ],
+									"numinlets" : 1,
+									"id" : "obj-4",
+									"numoutlets" : 0
+								}
+
+							}
+ ],
+						"lines" : [ 							{
+								"patchline" : 								{
+									"source" : [ "obj-5", 0 ],
+									"destination" : [ "obj-12", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-12", 0 ],
+									"destination" : [ "obj-11", 1 ],
+									"order" : 1
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-12", 0 ],
+									"destination" : [ "obj-13", 0 ],
+									"order" : 0
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-13", 0 ],
+									"destination" : [ "obj-10", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-11", 0 ],
+									"destination" : [ "obj-4", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-1", 0 ],
+									"destination" : [ "obj-11", 0 ]
+								}
+
+							}
+ ]
+					}
+
+				}
+
+			}
+ ],
+		"appversion" : 		{
+			"major" : 8,
+			"minor" : 5,
+			"revision" : 5,
+			"architecture" : "x64",
+			"modernui" : 1
+		}
+,
+		"classnamespace" : "box",
+		"description" : "101 x 22, containing 1 object",
+		"tags" : "opengl, gen",
+		"snippetinfo" : 		{
+			"name" : "Flax_Video_Tile",
+			"objects" : "jit.gl.pix",
+			"tags" : "opengl, gen",
+			"description" : "101 x 22, containing 1 object",
+			"image" : "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"
+		}
+
+	}
+
+}
